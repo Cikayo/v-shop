@@ -4,7 +4,7 @@
     <van-divider />
     <van-form @submit="handleSubmit">
       <div>
-        <h3 class="block-title">Usser Info</h3>
+        <h3 class="block-title">User Info</h3>
         <van-field
           v-model="form.useremail"
           name="useremail"

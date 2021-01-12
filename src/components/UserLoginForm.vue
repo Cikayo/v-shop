@@ -19,7 +19,7 @@
       :rules="[{ required: true, message: 'password!' }]"
     />
     <div class="login-functions">
-      <van-button block type="primary" native-type="submit" class="login-submit-btn">Submit</van-button>
+      <van-button block type="primary" native-type="submit" class="login-submit-btn">Login</van-button>
     </div>
   </van-form>
 </template>
