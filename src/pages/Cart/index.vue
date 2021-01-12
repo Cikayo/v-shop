@@ -9,6 +9,8 @@
         <p>😭 Your cart is empty. Do some shopping!</p>
       </div>
     </template>
+    <van-divider />
+    <YouMightLike />
     <van-submit-bar
       v-show="productList.length > 0"
       label="Total:"
@@ -25,6 +27,7 @@
 import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import CartList from './components/CartList.vue';
+import YouMightLike from '../../components/YouMightLike.vue';
 
 const router = useRouter();
 let productList = reactive([
