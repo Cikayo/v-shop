@@ -26,7 +26,7 @@
 import ProductFilter from './components/ProductFilter.vue';
 let productList = [
   {
-    url: 'https://media.vancaro.com/product/smallimage/n/r/nrc0590-4-200122.jpg',
+    url: 'https://img1.jeulia.com/data/product/JEMO0021/1/500x500/G1-GEdiamond_M1-14Kwhitegold.jpg',
     name: 'Princess Cut',
     price: 99
   },
@@ -36,17 +36,17 @@ let productList = [
     price: 109
   },
   {
-    url: 'https://media.vancaro.com/product/smallimage/n/c/ncr00920161026-0-20180728.jpg',
-    name: 'Princess Cut',
-    price: 89
-  },
-  {
     url: 'https://media.vancaro.com/product/smallimage/n/r/nrc0455-3-20180728.jpg',
     name: 'Princess Cut',
     price: 129
   },
   {
-    url: 'https://media.vancaro.com/product/smallimage/n/r/nrc0584-2-20191226.jpg',
+    url: 'https://img1.jeulia.com/data/product/JEMO0010/1/500x500/G1-GEdiamond_G2-GEdiamond_M1-14Kwhitegold.jpg',
+    name: 'Princess Cut',
+    price: 89
+  },
+  {
+    url: 'https://img1.jeulia.com/data/product/JEMO0002/1/500x500/G1-GEdiamond_G2-GEdiamond_G3-GEdiamond_M1-14Krosegold.jpg',
     name: 'Princess Cut',
     price: 149
   },
