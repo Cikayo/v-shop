@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import UserRegForm from '../../components/UserRegForm.vue';
+import UserRegForm from '@/components/UserRegForm.vue';
 function handleSubmit(values) {
   console.log(values)
 }

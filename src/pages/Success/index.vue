@@ -2,7 +2,7 @@
   <div class="site-pay-success">
     <h1 class="success-title">Think You!</h1>
     <van-divider />
-    <div class="order-id">You order id is 6006789</div>
+    <div class="order-id">You order id is {{orderId}}</div>
     <div class="order-description">
       <p>
         Important Notes: We have received your order and send you a confirmation email with the order information below.
@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-
+let orderId = Date.now().toString().slice(1,8)
 </script>
 
 <style lang="scss" scoped>

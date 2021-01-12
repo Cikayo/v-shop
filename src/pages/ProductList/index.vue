@@ -12,7 +12,7 @@
               {{item.name}}
             </div>
             <div class="product-info__price">
-              $ {{item.price}}
+              ${{item.price}}
             </div>
           </div>
         </router-link>

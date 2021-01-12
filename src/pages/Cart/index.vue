@@ -27,7 +27,7 @@
 import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import CartList from './components/CartList.vue';
-import YouMightLike from '../../components/YouMightLike.vue';
+import YouMightLike from '@/components/YouMightLike.vue';
 
 const router = useRouter();
 let productList = reactive([

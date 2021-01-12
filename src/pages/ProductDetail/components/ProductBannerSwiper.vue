@@ -1,5 +1,5 @@
 <template>
-  <van-swipe class="site-product-banner__swiper" :autoplay="3000" indicator-color="white">
+  <van-swipe class="site-product-banner__swiper" :autoplay="3000" indicator-color="#000">
     <van-swipe-item v-for="item in productBannerList" :key="item.url">
       <img class="product-banner-img" v-lazy="item.url" alt="">
     </van-swipe-item>

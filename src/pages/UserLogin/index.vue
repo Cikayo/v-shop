@@ -16,7 +16,7 @@
 <script setup>
 import { Notify } from 'vant';
 import { useRouter } from 'vue-router';
-import UserLoginForm from '../../components/UserLoginForm.vue';
+import UserLoginForm from '@/components/UserLoginForm.vue';
 
 const router = useRouter();
 
