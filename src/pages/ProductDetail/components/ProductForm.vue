@@ -10,16 +10,16 @@
         v-model="form.size"
         label="Size"
         placeholder="Size"
-        @click="showSku = true"
+        @click="showSize = true"
       />
-      <van-popup v-model:show="showSku" position="bottom">
+      <van-popup v-model:show="showSize" position="bottom">
         <van-picker
           show-toolbar
           cancel-button-text="cancel"
           confirm-button-text="confirm"
           :columns="skuList"
           @confirm="handleSkuConfirm"
-          @cancel="showSku = false"
+          @cancel="showSize = false"
         />
       </van-popup>
       <van-field class="form-item product-qty" label-width="2em" name="qty" label="Qty">
@@ -47,12 +47,12 @@ let form = reactive({
   size: '',
   qty: 1
 })
-let showSku = ref(false);
+let showSize = ref(false);
 let skuList = reactive(['S', 'M', 'L', 'XL', 'XXL']);
 function handleSkuConfirm(value) {
   console.log(value)
-  form.sku = value;
-  showSku.value = false;
+  form.size = value;
+  showSize.value = false;
 }
 function handleAddClick() {
   router.push('/pay/cart')
