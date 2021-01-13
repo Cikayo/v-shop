@@ -2,15 +2,15 @@
   <van-nav-bar class="site-nav-bar" fixed>
     <template #left>
       <router-link to="/home">
-        <van-icon name="wap-nav" size="20" color="#000" />
+        <van-icon name="wap-nav" size="20" />
       </router-link>
     </template>
     <template #right>
       <router-link to="/user/login">
-        <van-icon name="contact" size="20" color="#000" />
+        <van-icon name="contact" size="20" />
       </router-link>
       <router-link to="/pay/cart">
-        <van-icon class="site-cart-icon" name="shopping-cart-o" size="20" color="#000" />
+        <van-icon class="site-cart-icon" name="shopping-cart-o" size="20" />
       </router-link>
     </template>
     <template #title>
@@ -34,6 +34,14 @@ function onClickRight() {
 .site-nav-bar {
   .site-cart-icon {
     margin-left: .5rem;
+  }
+  .van-icon {
+    color: #000;
+  }
+  a:active {
+    i {
+      color: #f00;
+    }
   }
 }
 </style>

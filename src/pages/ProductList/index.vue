@@ -22,7 +22,6 @@
 </template>
 
 <script setup>
-// 商品列表页
 import ProductFilter from './components/ProductFilter.vue';
 let productList = [
   {

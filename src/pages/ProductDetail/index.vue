@@ -6,16 +6,13 @@
       <div class="product-name">Sunflower Ring Bridal Sets You Are My Sunshine Daisy Inspired</div>
       <div class="product-sku">Item No.NRC0706</div>
     </div>
-    <!-- 商品系列推荐 -->
     <div></div>
-    <!-- 商品加购表单 -->
     <ProductForm />
     <ProductDescription />
   </div>
 </template>
 
 <script setup>
-// vue-router4 中有 useRoute 和 useRouter 两个方法
 import { useRoute } from "vue-router";
 import ProductBannerSwiper from './components/ProductBannerSwiper.vue';
 import ProductForm from './components/ProductForm.vue';
