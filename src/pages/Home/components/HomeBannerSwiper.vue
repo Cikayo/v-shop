@@ -1,7 +1,9 @@
 <template>
   <van-swipe class="site-home-banner__swiper" :autoplay="3000" indicator-color="#000">
     <van-swipe-item v-for="item in swiperList" :key="item.url">
-      <img v-lazy="item.url" alt="">
+      <router-link to="/product/detail/600">
+        <img v-lazy="item.url" alt="">
+      </router-link>
     </van-swipe-item>
   </van-swipe>
 </template>

@@ -1,17 +1,15 @@
 <template>
   <div>
-    user center
+    <UserAvatar />
+    <OrderFunction />
+    <UserSet />
   </div>
 </template>
 
-<script>
-export default {
-  setup () {
-    
-
-    return {}
-  }
-}
+<script setup>
+import UserAvatar from './components/UserAvatar.vue';
+import OrderFunction from './components/OrderFunction.vue';
+import UserSet from './components/UserSet.vue';
 </script>
 
 <style scoped>

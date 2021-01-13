@@ -40,6 +40,7 @@
 </template>
 
 <script setup>
+import { Toast } from 'vant';
 import { ref, reactive } from 'vue';
 import { useRouter } from 'vue-router';
 const router = useRouter();
@@ -54,11 +55,26 @@ function handleSkuConfirm(value) {
   form.size = value;
   showSize.value = false;
 }
+// checkout and add to cart button funcitons
 function handleAddClick() {
-  router.push('/pay/cart')
+  Toast.loading({
+    message: 'Loading...',
+    forbidClick: true,
+    duration: 1000
+  });
+  setTimeout(() => {
+    router.push('/pay/cart')
+  }, 1000)
 }
 function handleCheckoutClick() {
-  router.push('/pay/checkout')
+  Toast.loading({
+    message: 'Loading...',
+    forbidClick: true,
+    duration: 1000
+  });
+  setTimeout(() => {
+    router.push('/pay/checkout')
+  }, 1500)
 }
 </script>
 

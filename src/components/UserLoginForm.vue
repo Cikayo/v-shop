@@ -28,7 +28,7 @@
 import { Notify } from 'vant';
 import { ref } from "vue";
 export default {
-  // props 参数不能省略
+  // props can not be ignored
   setup(props, { emit }) {
     let useremail = ref('');
     let password = ref('');

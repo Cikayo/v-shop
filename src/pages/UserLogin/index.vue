@@ -14,17 +14,23 @@
 </template>
 
 <script setup>
-import { Notify } from 'vant';
+import { Toast } from 'vant';
 import { useRouter } from 'vue-router';
+import { setUserToken } from '@/utils/user.js';
 import UserLoginForm from '@/components/UserLoginForm.vue';
 
 const router = useRouter();
 
 function handleSubmit(values) {
-  Notify({ type: 'success', message: 'Success' });
-  console.log(values);
+  Toast.loading({
+    duration: 1000,
+    forbidClick: true,
+    message: 'Loading...',
+  });
   setTimeout(() => {
-    router.push('/');
+    setUserToken(Date.now());
+    Toast.success('Success');
+    router.push('/user/center');
   }, 1000)
 }
 </script>
