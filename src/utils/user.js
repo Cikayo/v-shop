@@ -1,10 +1,13 @@
-import Cookie from 'js-cookie';
+import Cookies from 'js-cookie';
 // user const token
 export const USER_TOKEN = 'token';
 
 export function getUserToken() {
-  return Cookie.get(USER_TOKEN);
+  return Cookies.get(USER_TOKEN);
 }
 export function setUserToken(token) {
-  Cookie.set(USER_TOKEN, token);
+  Cookies.set(USER_TOKEN, token);
+}
+export function removeUserToken() {
+  Cookies.remove(USER_TOKEN);
 }
