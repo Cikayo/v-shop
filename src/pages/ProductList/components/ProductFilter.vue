@@ -2,8 +2,8 @@
   <div class="site-product-filter">
     <van-sticky>
       <van-dropdown-menu active-color="#FF5722">
-        <van-dropdown-item v-model="sortVal" :options="sortOption" @change="handleSortChange" />
-        <van-dropdown-item v-model="filterVal" :options="filterOption" @change="handleFilterChange" />
+        <van-dropdown-item title="Sort By" v-model="sortVal" :options="sortOption" @change="handleSortChange" />
+        <van-dropdown-item title="Filter" v-model="filterVal" :options="filterOption" @change="handleFilterChange" />
       </van-dropdown-menu>
     </van-sticky>
   </div>
@@ -14,13 +14,13 @@ import { ref, reactive } from 'vue';
 import { Toast } from 'vant';
 import { pageScrollTop } from '@/utils/common.js';
 let sortVal = ref('default');
-let filterVal = ref('rings');
+let filterVal = ref('all');
 let sortOption = reactive([
   { text: 'Default', value: 'default' },
-  { text: 'All', value: 'all' },
   { text: 'New', value: 'new' },
 ]);
 let filterOption = reactive([
+  { text: 'All', value: 'all' },
   { text: 'Rings', value: 'rings' },
   { text: 'Necklaces', value: 'necklaces' },
   { text: 'Others', value: 'others' },

@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Layout from '../layout/index.vue';
+const Layout = () => import('../layout/index.vue');
 const Home = () => import('../pages/Home/index.vue');
 const UserCenter = () => import('../pages/UserCenter/index.vue');
 const ProductList = () => import('../pages/ProductList/index.vue');
@@ -10,6 +10,7 @@ const UserForgetPassword = () => import('../pages/UserForgetPassword/index.vue')
 const Cart = () => import('../pages/Cart/index.vue');
 const Checkout = () => import('../pages/Checkout/index.vue');
 const Success = () => import('../pages/Success/index.vue');
+const UserWishlist = () => import('../pages/UserWishlist/index.vue');
 
 const routes = [
   {
@@ -42,6 +43,10 @@ const routes = [
       {
         path: 'forgetpassword',
         component: UserForgetPassword
+      },
+      {
+        path: 'wishlist',
+        component: UserWishlist
       }
     ]
   },
