@@ -23,7 +23,7 @@
 
 <script setup>
 import { reactive } from 'vue';
-import list from '../mock/product.json';
+import list from '@/mock/product.json';
 let productList = reactive(list);
 </script>
 

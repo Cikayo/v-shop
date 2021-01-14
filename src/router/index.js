@@ -9,6 +9,7 @@ const UserReg = () => import('../pages/UserReg/index.vue');
 const UserForgetPassword = () => import('../pages/UserForgetPassword/index.vue');
 const Cart = () => import('../pages/Cart/index.vue');
 const Checkout = () => import('../pages/Checkout/index.vue');
+const UnpaidList = () => import('../pages/UnpaidList/index.vue');
 const Success = () => import('../pages/Success/index.vue');
 const UserWishlist = () => import('../pages/UserWishlist/index.vue');
 const UserAddress = () => import('../pages/UserAddress/index.vue');
@@ -81,6 +82,10 @@ const routes = [
       {
         path: 'checkout',
         component: Checkout
+      },
+      {
+        path: 'unpaidlist',
+        component: UnpaidList
       },
       {
         path: 'success',
