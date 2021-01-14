@@ -1,5 +1,5 @@
 <template>
-  <van-form class="site-product-detail__form">
+  <van-form class="site-product-detail__form" @submit="handleFormSubmit">
     <div>
       <van-field
         class="form-item"
@@ -11,6 +11,7 @@
         label="Size"
         placeholder="Size"
         @click="showSize = true"
+        :rules="[{ required: true, message: 'Please choose size' }]"
       />
       <van-popup v-model:show="showSize" position="bottom">
         <van-picker
@@ -28,14 +29,9 @@
         </template>
       </van-field>
     </div>
-    <van-row gutter="20" class="product-form-functions">
-      <van-col span="12">
-        <van-button block type="primary" class="checkout-btn" @click="handleCheckoutClick">Checkout</van-button>
-      </van-col>
-      <van-col span="12">
-        <van-button block type="default" class="add-cart-btn" @click="handleAddClick">Add To Cart</van-button>
-      </van-col>
-    </van-row>
+    <div class="product-form-functions">
+      <van-button block type="primary" class="add-cart-btn" native-type="submit">Add To Cart</van-button>
+    </div>
   </van-form>
 </template>
 
@@ -55,26 +51,16 @@ function handleSkuConfirm(value) {
   form.size = value;
   showSize.value = false;
 }
-// checkout and add to cart button funcitons
-function handleAddClick() {
+// add to cart button funcitons
+function handleFormSubmit(values) {
+  console.log(values);
   Toast.loading({
     message: 'Loading...',
-    forbidClick: true,
     duration: 1000
   });
   setTimeout(() => {
     router.push('/pay/cart')
   }, 1000)
-}
-function handleCheckoutClick() {
-  Toast.loading({
-    message: 'Loading...',
-    forbidClick: true,
-    duration: 1000
-  });
-  setTimeout(() => {
-    router.push('/pay/checkout')
-  }, 1500)
 }
 </script>
 
@@ -86,7 +72,7 @@ function handleCheckoutClick() {
   .product-form-functions {
     margin-top: .5rem;
     padding: 1rem .5rem;
-    .checkout-btn {
+    .add-cart-btn {
       background-color: #000;
       border: #000;
     }
