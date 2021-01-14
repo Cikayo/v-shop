@@ -1,5 +1,10 @@
 # About🤞🏼
-V-Shop is a mobile web app. Plase open chrome developer tools, and change to mobile mode.
+V-Shop is a mobile web app.
+
+Vite 2 + Vue 3 + Vant UI + Vue Router 4.
+Plase open chrome developer tools, and change to mobile mode.
+
+## Screenshot
 ![v-shop v-shop gif](/images/v-shop.gif)
 ![v-shop home](/images/home.png)
 ![v-shop product list](/images/product-list.png)

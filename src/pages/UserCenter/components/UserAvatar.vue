@@ -28,6 +28,8 @@ function handleLogoutClick() {
   Dialog.confirm({
     title: 'Prompt',
     message: 'Are you sure to exit?',
+    confirmButtonText: 'Confirm',
+    cancelButtonText: 'Cancel'
   }).then(() => {
     removeUserToken();
     Toast.loading('Loading...');
@@ -35,9 +37,7 @@ function handleLogoutClick() {
       Toast.success('Success');
       router.replace('/');
     }, 1000)
-  }).catch(() => {
-      // on cancel
-    });  
+  }).catch(() => {  });  
 }
 </script>
 
