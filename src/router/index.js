@@ -11,6 +11,8 @@ const Cart = () => import('../pages/Cart/index.vue');
 const Checkout = () => import('../pages/Checkout/index.vue');
 const Success = () => import('../pages/Success/index.vue');
 const UserWishlist = () => import('../pages/UserWishlist/index.vue');
+const UserAddress = () => import('../pages/UserAddress/index.vue');
+
 
 const routes = [
   {
@@ -47,6 +49,10 @@ const routes = [
       {
         path: 'wishlist',
         component: UserWishlist
+      },
+      {
+        path: 'address',
+        component: UserAddress
       }
     ]
   },
